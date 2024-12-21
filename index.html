@@ -1,24 +1,49 @@
-<!doctype html>
+
+<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Weather App</title>
-        <link rel="stylesheet" href="styles.css" />
-    </head>
-    <body>
-        <div id="weather-app">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Check weather conditions for any city worldwide" />
+    <meta name="keywords" content="weather, forecast, temperature, humidity" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="weather-app">
+        <header>
             <h1>Weather App</h1>
-            <input type="text" id="city-input" placeholder="Enter city name" />
-            <button id="search-btn">Search</button>
-            <div id="weather-result">
-                <p id="error-message"></p>
+        </header>
+        
+        <div class="search-container">
+            <input 
+                type="text" 
+                id="city-input" 
+                placeholder="Enter city name" 
+                autocomplete="off"
+            />
+            <button id="search-btn">
+                Search
+            </button>
+        </div>
+
+        <div id="weather-result">
+            <div id="loading" class="hidden">
+                <div class="loader"></div>
+            </div>
+            
+            <p id="error-message"></p>
+            
+            <div class="weather-info">
                 <h2 id="city-name"></h2>
+                <img id="weather-icon" class="weather-icon" src="" alt="Weather condition" />
                 <p id="temperature"></p>
                 <p id="description"></p>
                 <p id="humidity"></p>
             </div>
         </div>
-        <script src="ak.js"></script>
-    </body>
+    </div>
+    <script src="ak.js"></script>
+</body>
 </html>
