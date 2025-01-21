@@ -22,6 +22,7 @@ function handleSearch() {
     }
     showLoading();
     fetchWeather(city);
+ 
 }
 
 function showLoading() {
@@ -100,7 +101,7 @@ function displayError(message) {
     document.getElementById("error-message").textContent = message;
 }
 
-// Clear input on focus
+// Clear input on focus btn
 document.getElementById("city-input").addEventListener("focus", function() {
     this.value = "";
 });
